@@ -60,7 +60,7 @@ public class Browser {
 			
 		}
 		
-		driver.manage().window().fullscreen();
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
 		}
