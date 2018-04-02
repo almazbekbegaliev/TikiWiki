@@ -15,7 +15,6 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		glue = "stepDefinitions",
 		tags = "@Excel",
 		dryRun = true
-		
 )
 
 public class CucesRunner extends AbstractTestNGCucumberTests {
