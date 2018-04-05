@@ -10,11 +10,11 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 
-		plugin = { "pretty", "html:target/cucumber" },
+		plugin = {"pretty", "html:target/cucumber"},
 		features = "./src/test/resources/features",
 		glue = "stepDefinitions",
-		tags = "@regression",
-		dryRun = true
+		tags = "@regression"
+		,dryRun = true
 )
 
 public class RegressionRunner extends AbstractTestNGCucumberTests {
