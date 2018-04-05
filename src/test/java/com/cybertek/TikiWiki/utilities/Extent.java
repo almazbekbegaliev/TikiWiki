@@ -15,7 +15,7 @@ public class Extent {
 
 	
 	public static void setupExtent() {
-		report = new ExtentReports("/Users/almazbekbegaliev/Desktop/report.html");
+		report = new ExtentReports("target/Extent-report/report.html");
 		logger = report.startTest("Runnig Smoke Test");
 		logger.log(LogStatus.INFO, "Browser Started...");
 	}
