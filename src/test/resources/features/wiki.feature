@@ -1,19 +1,25 @@
-Feature: Wiki page
-
-Scenario: Create new wiki page
-Given User navigates to Create a Wiki Page
-When User creates new Wiki Page
-Then "Success" message should be shown
-And User should be able to edit, see source, rename, see history, remove and assign permissions of new created page
+Feature: Calendar Feature
 
 
-Scenario: List Wiki Pages search
-Given User navigates to Create a Wiki Page
-When User clicks on List Wiki Page tab
-And User searches for "Rock-and-Roll"
-Then "Rock-and-Roll" results should display 
+	Scenario: Create an event in Calendar
+	Given User navigates to Admin Calendars page
+	When User creates "My Company Holidays Calendar"
+	Then "My Company Holidays Calendar" should in the calendar list
 
-Scenario: Wiki page setting and features
-Given User navigates to Create a Wiki Page
-When User navigates to Wiki page settings and features
-Then User should be able to choose basic or advanced settings
+	Scenario: Edit a Calendar
+	Given User navigates to Calendar page
+	When User edits calendar
+	Then Edited Calendar should be in the list
+	#"<name>","<Description>","<Custom location","<Custom participants>","<Custom classificatoin>","<Custom language>","<Custom URL>","<Custom subscription list>","<Custom priority>","<Personla Calendar>","<Start day>","<Start of day>","<End of day>",
+
+	Scenario: Import Calendar
+	Given User navigates to Admin Calendars page
+	When User imports CSV file 
+	Then Calendar should be imported
+
+	Scenario: Search for Calendar events
+	Given User navigates to Admin Calendars page
+	When User searches for "My Company Holidays Calendar"
+	Then "My Company Holidays Calendar" should be in the result list
+
+	
