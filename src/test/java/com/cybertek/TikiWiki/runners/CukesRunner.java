@@ -15,7 +15,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		features = "./src/test/resources/features",
 		glue = "stepDefinitions",
 		tags = "@Excel",
-		dryRun = true
+		dryRun = false
 		
 )
 
