@@ -13,8 +13,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		plugin = { "pretty", "html:target/cucumber" },
 		features = "./src/test/resources/features",
 		glue = "stepDefinitions",
-		tags = "@Excel"
-    dryRun = true
+		tags = "@Excel",
+   		dryRun = true
 )
 
 public class CucesRunner extends AbstractTestNGCucumberTests {
