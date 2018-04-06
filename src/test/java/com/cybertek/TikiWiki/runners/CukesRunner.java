@@ -18,7 +18,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
    		dryRun = true
 )
 
-public class CucesRunner extends AbstractTestNGCucumberTests {
+public class CukesRunner extends AbstractTestNGCucumberTests {
 
 	@BeforeClass
 	public void setup() {
