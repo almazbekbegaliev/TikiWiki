@@ -50,7 +50,6 @@ public class LoginAndOut {
 		driver.get(Config.getProperty("url"));
 		driver.manage().window().fullscreen();
 		logInLink.click();
-
 		login.click();
 
 		userName.sendKeys(Config.getProperty("username"));
