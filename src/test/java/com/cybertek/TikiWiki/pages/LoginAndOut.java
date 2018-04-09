@@ -28,18 +28,23 @@ public class LoginAndOut {
 	@FindBy(xpath = "//button[.='Log in ']")
 	WebElement loginButton;
 
+	@FindBy(css = "button.dropdown-toggle.login_link.btn.btn-link")
+	WebElement logout;
+	
+	@FindBy(xpath="//a[.='Log out']")
+	WebElement signOut;
+	
+	@FindBy(css ="button[class='btn btn-link dropdown-toggle']")
+	WebElement logInLink;
+	
 	public void logIn() {
 		driver.get(Config.getProperty("url"));
+		logInLink.click();
 		userName.sendKeys(Config.getProperty("username"));
 		password.sendKeys(Config.getProperty("password"));
 		loginButton.click();
 	}
 	
-	@FindBy(xpath="//button[contains(text(),'Log out')]")
-	WebElement logout;
-	
-	@FindBy(xpath="//a[.='Log out']")
-	WebElement signOut;
 	
 	public void logoutClick() {
 		logout.click();

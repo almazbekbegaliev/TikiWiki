@@ -13,8 +13,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		plugin = { "pretty", "html:target/cucumber",
 				"json:target/cucumber.json"},
 		features = "./src/test/resources/features",
-		glue = "stepDefinitions",
-		tags = "@Excel",
+		glue = "com.cybertek.TikiWiki.stepDefinitions",
+		tags = "@new",
 		dryRun = false
 		
 )
@@ -23,7 +23,6 @@ public class CukesRunner extends AbstractTestNGCucumberTests {
 
 	@BeforeClass
 	public void setup() {
-		System.out.println("Hello from BeforeClass");
 		Extent.setupExtent();
 	}
 
