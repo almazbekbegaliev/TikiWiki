@@ -9,7 +9,7 @@ import com.cybertek.TikiWiki.utilities.Browser;
 import com.cybertek.TikiWiki.utilities.Config;
 
 public class LoginAndOut {
-	static WebDriver driver;
+	WebDriver driver;
 
 	public LoginAndOut() {
 		driver = Browser.getDriver();
