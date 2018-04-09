@@ -1,6 +1,7 @@
 Feature: Articles Home Page Functionalities
   User Should be able to see articles,
   Edit, Print and Remove an article.
+  
 
   Background: Logged In To the Tiki Wiki
     Given User is logged into Tiki Wiki
