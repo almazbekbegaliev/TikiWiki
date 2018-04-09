@@ -5,18 +5,25 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import com.cybertek.TikiWiki.utilities.Browser;
+import com.cybertek.TikiWiki.utilities.Config;
 import com.cybertek.TikiWiki.utilities.Extent;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
-
+import cucumber.api.java.Before;
 
 public class Hooks {
 
+	WebDriver driver = Browser.getDriver();
+
+	@Before
+	public void setup() {
+		driver.get(Config.getProperty("url"));
+	}
+
 	@After
 	public void afterMethod(Scenario scenario) {
-		WebDriver driver = Browser.getDriver();
-		
+
 		if (scenario.isFailed()) {
 			byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 			scenario.embed(screenshot, "image/png");
@@ -27,9 +34,5 @@ public class Hooks {
 		}
 
 	}
-	
-	
-	
-	
-	
+
 }
