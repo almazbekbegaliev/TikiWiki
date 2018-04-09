@@ -1,5 +1,6 @@
 package com.cybertek.TikiWiki.pages;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,23 +31,40 @@ public class LoginAndOut {
 	@FindBy(xpath = "//button[.='Log in ']")
 	WebElement loginButton;
 
+	@FindBy(css = "button.dropdown-toggle.login_link.btn.btn-link")
+	WebElement logout;
+	
+	@FindBy(css ="a[href='tiki-logout.php']")
+	WebElement signOut;
+	
+	@FindBy(css ="button[class='btn btn-link dropdown-toggle']")
+	WebElement logInLink;
+	
 	public void logIn() {
+		try {
+			logoutClick();
+			Alert alert = driver.switchTo().alert();
+			alert.accept();
+		}catch (Exception e) {
+			
+		}
 		driver.get(Config.getProperty("url"));
-
+		driver.manage().window().fullscreen();
+		logInLink.click();
 		login.click();
-
 		userName.sendKeys(Config.getProperty("username"));
 		password.sendKeys(Config.getProperty("password"));
 		loginButton.click();
 	}
 	
-	@FindBy(xpath="//button[contains(text(),'Log out')]")
-	WebElement logout;
-	
-	@FindBy(xpath="//a[.='Log out']")
-	WebElement signOut;
 	
 	public void logoutClick() {
+		try {
+			Alert alert = driver.switchTo().alert();
+			alert.accept();
+		}catch(Exception ee) {
+			
+		}
 		logout.click();
 		signOut.click();
 	}
