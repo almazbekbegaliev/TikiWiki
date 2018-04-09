@@ -2,16 +2,12 @@ package com.cybertek.TikiWiki.stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 
-
 import com.cybertek.TikiWiki.pages.LoginAndOut;
-
 import com.cybertek.TikiWiki.utilities.Browser;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-
-import pages.LoginAndOut;
 
 
 public class Newsletters_stepDefs {
