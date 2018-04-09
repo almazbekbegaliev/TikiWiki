@@ -9,7 +9,9 @@ import com.cybertek.TikiWiki.utilities.Browser;
 import com.cybertek.TikiWiki.utilities.Config;
 
 public class LoginAndOut {
-	static WebDriver driver;
+
+	WebDriver driver;
+ master
 
 	public LoginAndOut() {
 		driver = Browser.getDriver();
@@ -30,7 +32,9 @@ public class LoginAndOut {
 
 	public void logIn() {
 		driver.get(Config.getProperty("url"));
+
 		login.click();
+
 		userName.sendKeys(Config.getProperty("username"));
 		password.sendKeys(Config.getProperty("password"));
 		loginButton.click();
