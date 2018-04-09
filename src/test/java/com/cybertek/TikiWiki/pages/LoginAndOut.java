@@ -52,6 +52,8 @@ public class LoginAndOut {
 		logInLink.click();
 		login.click();
 
+		login.click();
+
 		userName.sendKeys(Config.getProperty("username"));
 		password.sendKeys(Config.getProperty("password"));
 		loginButton.click();

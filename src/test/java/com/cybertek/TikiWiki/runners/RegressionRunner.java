@@ -11,7 +11,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 
 		plugin = {"pretty", "html:target/cucumber",
-				"json:target/cucumber.json"},
+				"json:target/cucumber.json"
+				},
 		features = "./src/test/resources/features",
 		glue = "stepDefinitions",
 		tags = "@regression"
