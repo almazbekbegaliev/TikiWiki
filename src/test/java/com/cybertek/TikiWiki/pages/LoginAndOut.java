@@ -12,7 +12,6 @@ import com.cybertek.TikiWiki.utilities.Config;
 public class LoginAndOut {
 
 	WebDriver driver;
- master
 
 	public LoginAndOut() {
 		driver = Browser.getDriver();
