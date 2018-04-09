@@ -1,16 +1,25 @@
-Feature: Wiki page
+Feature: Calendar Feature
 
-Scenario: Create new wiki page
-Given User navigates to Create a Wiki Page
-When User enters search criteria in search box
-And Clicks on Create Page button
-Then User should see search results
 
-Scenario: List Wiki Pages search
-Given User navigates to Create a Wiki Page
-When User clicks on List Wiki Page tab
-And Enters search criteria
-And Chooses category from dropdown
-And Enters displayed rows number
-And Clicks of Find button
-Then Search result should display
+	Scenario: Create an event in Calendar
+	Given User navigates to Admin Calendars page
+	When User creates "My Company Holidays Calendar"
+	Then "My Company Holidays Calendar" should in the calendar list
+
+	Scenario: Edit a Calendar
+	Given User navigates to Calendar page
+	When User edits calendar
+	Then Edited Calendar should be in the list
+	#"<name>","<Description>","<Custom location","<Custom participants>","<Custom classificatoin>","<Custom language>","<Custom URL>","<Custom subscription list>","<Custom priority>","<Personla Calendar>","<Start day>","<Start of day>","<End of day>",
+
+	Scenario: Import Calendar
+	Given User navigates to Admin Calendars page
+	When User imports CSV file 
+	Then Calendar should be imported
+
+	Scenario: Search for Calendar events
+	Given User navigates to Admin Calendars page
+	When User searches for "My Company Holidays Calendar"
+	Then "My Company Holidays Calendar" should be in the result list
+
+	

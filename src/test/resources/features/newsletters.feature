@@ -4,7 +4,7 @@ Scenario Outline: Create Admin newsletters
 Given User navigates to Admin newsletters
 When User creates newsletter using "<name>", "<description>", "<checkBoxes>", "<numOfDays>", "<articleTypes>"
 Then "<name>" "<articleType>" should be created
-And we good to go
+
 Examples:
 |<name>				| <description>		|<checkBoxes>							|<numOfDays>|<articleTypes>|
 |Automation news	|News in the industry| Users can subsribe any email adress	|3		|Classified		|
