@@ -1,11 +1,11 @@
-
-Feature: Creating New Article using Excel File
+@new
+Feature: Creating New Article
   User should be able to Create new Article
 
   Background: Logged In To the Tiki Wiki
     Given User is logged into Tiki Wiki
     And User Goes to New Article page
-@new
+
   Scenario: Create New Article: Content
     When User creates a new article by content "./src/test/resources/testData/articles.xlsx" "Sheet1"
     Then Article should be displayed on the list
