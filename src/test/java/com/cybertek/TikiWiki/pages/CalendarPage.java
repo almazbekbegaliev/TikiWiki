@@ -24,8 +24,14 @@ public class CalendarPage {
 	@FindBy(xpath="//a[@title='Admin']")
 	public WebElement admin;
 	
+	@FindBy(xpath="//a[@href='tiki-calendar.php']")
+	public WebElement calendarLink;
+	
 	@FindBy(xpath="//a[@title='Add Event']")
 	public WebElement addEvent;
+	
+	
+	
 	
 	@FindBy(xpath="//a[@title='List View']")
 	public WebElement listView;

@@ -17,13 +17,14 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class CreatingNewArticles_stepDefs {
-
+	WebDriver driver;
+	LoginAndOut loginPage;
 	private String expected;
 
 	@Given("^User is logged into Tiki Wiki$")
 	public void user_is_logged_into_Tiki_Wiki() {
-		WebDriver driver = Browser.getDriver();
-		LoginAndOut loginPage = new LoginAndOut();
+		 driver = Browser.getDriver();
+		loginPage = new LoginAndOut();
 		loginPage.logIn();
 
 	}

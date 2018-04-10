@@ -10,7 +10,6 @@ import com.cybertek.TikiWiki.utilities.Browser;
 import com.cybertek.TikiWiki.utilities.Config;
 
 public class LoginAndOut {
-
 	WebDriver driver;
 
 	public LoginAndOut() {
@@ -40,15 +39,15 @@ public class LoginAndOut {
 	WebElement logInLink;
 	
 	public void logIn() {
-		try {
-			logoutClick();
-			Alert alert = driver.switchTo().alert();
-			alert.accept();
-		}catch (Exception e) {
-			
-		}
-		driver.get(Config.getProperty("url"));
-		driver.manage().window().fullscreen();
+//		try {
+//			logoutClick();
+//			Alert alert = driver.switchTo().alert();
+//			alert.accept();
+//		}catch (Exception e) {
+//			
+//		}
+//		driver.get(Config.getProperty("url"));
+//		driver.manage().window().fullscreen();
 		logInLink.click();
 		login.click();
 
@@ -61,12 +60,12 @@ public class LoginAndOut {
 	
 	
 	public void logoutClick() {
-		try {
-			Alert alert = driver.switchTo().alert();
-			alert.accept();
-		}catch(Exception ee) {
-			
-		}
+//		try {
+//			Alert alert = driver.switchTo().alert();
+//			alert.accept();
+//		}catch(Exception ee) {
+//			
+//		}
 		logout.click();
 		signOut.click();
 	}

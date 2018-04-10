@@ -4,6 +4,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+import com.cybertek.TikiWiki.pages.LoginAndOut;
 import com.cybertek.TikiWiki.utilities.Browser;
 import com.cybertek.TikiWiki.utilities.Config;
 import com.cybertek.TikiWiki.utilities.Extent;
@@ -15,10 +16,12 @@ import cucumber.api.java.Before;
 public class Hooks {
 
 	WebDriver driver = Browser.getDriver();
-
+	LoginAndOut log=new LoginAndOut();
+	
 	@Before
 	public void setup() {
 		driver.get(Config.getProperty("url"));
+		log.logIn();
 	}
 
 	@After
@@ -32,7 +35,8 @@ public class Hooks {
 		} else {
 			Extent.passTest(scenario);
 		}
-
+		log.logoutClick();
+		
 	}
 
 }

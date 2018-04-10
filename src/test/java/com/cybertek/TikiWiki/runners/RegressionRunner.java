@@ -16,7 +16,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		features = "./src/test/resources/features",
 		glue = "stepDefinitions",
 		tags = "@regression"
-		,dryRun = true
+		,dryRun = false
 )
 
 public class RegressionRunner extends AbstractTestNGCucumberTests {

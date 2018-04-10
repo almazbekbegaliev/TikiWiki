@@ -1,5 +1,6 @@
 package com.cybertek.TikiWiki.pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.cybertek.TikiWiki.utilities.Browser;
+import com.cybertek.TikiWiki.utilities.BrowserUtils;
 
 public class NewsletterPage {
 	WebDriver driver;
@@ -16,6 +18,7 @@ public class NewsletterPage {
 	public NewsletterPage() {
 		driver = Browser.getDriver();
 		PageFactory.initElements(driver, this);
+		
 
 	}
 
@@ -33,10 +36,15 @@ public class NewsletterPage {
 	 * 
 	 * @throws InterruptedException
 	 */
-
+	JavascriptExecutor js;
+		
 	public void adminNewsletterClick() throws InterruptedException {
+//		js.executeScript("window.scrollBy(0,1000);");
+		js=(JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,1500);");
+		BrowserUtils.sleep(2);
 		act = new Actions(driver);
-		Thread.sleep(2000);
+		BrowserUtils.sleep(2);
 		act.moveToElement(newsletter).click().build().perform();
 		adminNewsletters.click();
 	}
@@ -81,13 +89,18 @@ public class NewsletterPage {
 	 */
 
 	public void sendData(String name, String descript, String days, String types) throws InterruptedException {
+		js=(JavascriptExecutor)driver;
 		this.name.sendKeys(name);
+		BrowserUtils.sleep(1);
 		description.sendKeys(descript);
+		BrowserUtils.sleep(1);
+		js.executeScript("window.scrollBy(0,1500);");
 		numOfDays.clear();
 		numOfDays.sendKeys(days);
+		BrowserUtils.sleep(1);
 		Select sel=new Select(clipTypes);
 		sel.selectByVisibleText(types);
-		Thread.sleep(2000);
+		BrowserUtils.sleep(2);
 //		clipTypes.sendKeys(types);
 	}
 
@@ -133,7 +146,7 @@ public class NewsletterPage {
 
 	public void sendLinkClick() throws InterruptedException {
 		act = new Actions(driver);
-		Thread.sleep(2000);
+		BrowserUtils.sleep(2);
 		act.moveToElement(newsletter).click().build().perform();
 		sendNewsletters.click();
 	}

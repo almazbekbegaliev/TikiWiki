@@ -1,6 +1,6 @@
 Feature: Calendar Feature
 
-
+@smoke
 Scenario: Create an event in Calendar
 Given User navigates to Admin Calendars page
 When User creates "My Company Holidays Calendar"

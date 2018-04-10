@@ -12,9 +12,9 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 		plugin = { "pretty", "html:target/cucumber",
 				"json:target/cucumber.json" }, 
-		features = "./src/test/resources/features", 
-		glue = "stepDefinitions", 
-		tags = "@Excel", 
+		features = "src/test/resources/features", 
+		glue = "com.cybertek.TikiWiki/stepDefinitions", 
+		tags = "@smoke", 
 		dryRun = false
 
 )

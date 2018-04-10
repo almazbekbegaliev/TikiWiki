@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import com.cybertek.TikiWiki.pages.LoginAndOut;
 import com.cybertek.TikiWiki.pages.NewsletterPage;
 import com.cybertek.TikiWiki.utilities.Browser;
+import com.cybertek.TikiWiki.utilities.BrowserUtils;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -24,7 +25,9 @@ public class Newsletters_stepDefs {
 	@Given("^User navigates to Admin newsletters$")
 	public void user_navigates_to_Admin_newsletters() throws Exception {
 		newsletter.adminNewsletterClick();
+		BrowserUtils.sleep(1);
 		newsletter.createNewslettersClick();
+		BrowserUtils.sleep(1);
 	}
 
 	@When("^User creates newsletter using \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
