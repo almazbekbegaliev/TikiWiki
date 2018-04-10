@@ -27,6 +27,9 @@ public class CalendarPage {
 	@FindBy(xpath="//a[@title='Add Event']")
 	public WebElement addEvent;
 	
+	
+	
+	
 	@FindBy(xpath="//a[@title='List View']")
 	public WebElement listView;
 	

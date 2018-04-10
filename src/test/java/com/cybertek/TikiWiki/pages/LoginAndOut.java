@@ -30,6 +30,7 @@ public class LoginAndOut {
 
 	public void logIn() {
 		driver.get(Config.getProperty("url"));
+		login.click();
 		userName.sendKeys(Config.getProperty("username"));
 		password.sendKeys(Config.getProperty("password"));
 		loginButton.click();
