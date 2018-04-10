@@ -1,7 +1,8 @@
+@das1
 Feature: List Galleries
 
 Background:
-Given I login to TikiWiki
+Given User is logged into Tiki Wiki
 When I go to List Galleries
 
 Scenario:  Search Files

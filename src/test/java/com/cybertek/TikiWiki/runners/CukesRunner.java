@@ -15,6 +15,10 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		features = "src/test/resources/features", 
 		glue = "com.cybertek.TikiWiki/stepDefinitions", 
 		tags = "@smoke", 
+				"json:target/cucumber.json"},
+		features = "./src/test/resources/features",
+		glue = "com.cybertek.TikiWiki.stepDefinitions",
+		tags = "@new",
 		dryRun = false
 
 )

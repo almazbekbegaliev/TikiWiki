@@ -45,6 +45,10 @@ public class NewsletterPage {
 		BrowserUtils.sleep(2);
 		act = new Actions(driver);
 		BrowserUtils.sleep(2);
+
+	public void adminNewsletterClick() throws InterruptedException {
+		act = new Actions(driver);
+		Thread.sleep(2000);
 		act.moveToElement(newsletter).click().build().perform();
 		adminNewsletters.click();
 	}
@@ -101,6 +105,13 @@ public class NewsletterPage {
 		Select sel=new Select(clipTypes);
 		sel.selectByVisibleText(types);
 		BrowserUtils.sleep(2);
+		this.name.sendKeys(name);
+		description.sendKeys(descript);
+		numOfDays.clear();
+		numOfDays.sendKeys(days);
+		Select sel=new Select(clipTypes);
+		sel.selectByVisibleText(types);
+		Thread.sleep(2000);
 //		clipTypes.sendKeys(types);
 	}
 
@@ -147,6 +158,7 @@ public class NewsletterPage {
 	public void sendLinkClick() throws InterruptedException {
 		act = new Actions(driver);
 		BrowserUtils.sleep(2);
+		Thread.sleep(2000);
 		act.moveToElement(newsletter).click().build().perform();
 		sendNewsletters.click();
 	}

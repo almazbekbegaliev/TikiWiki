@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.cybertek.TikiWiki.pages.LoginAndOut;
 import com.cybertek.TikiWiki.pages.NewsletterPage;
+
 import com.cybertek.TikiWiki.utilities.Browser;
 import com.cybertek.TikiWiki.utilities.BrowserUtils;
 

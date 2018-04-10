@@ -5,6 +5,11 @@ import static org.testng.Assert.assertEquals;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import static org.testng.Assert.*;
+
 import com.cybertek.TikiWiki.pages.ArticlesPage;
 import com.cybertek.TikiWiki.pages.LoginAndOut;
 import com.cybertek.TikiWiki.pages.NewArticlesPage;
@@ -19,12 +24,15 @@ import cucumber.api.java.en.When;
 public class CreatingNewArticles_stepDefs {
 	WebDriver driver;
 	LoginAndOut loginPage;
+
 	private String expected;
 
 	@Given("^User is logged into Tiki Wiki$")
 	public void user_is_logged_into_Tiki_Wiki() {
 		 driver = Browser.getDriver();
 		loginPage = new LoginAndOut();
+		WebDriver driver = Browser.getDriver();
+		LoginAndOut loginPage = new LoginAndOut();
 		loginPage.logIn();
 
 	}
