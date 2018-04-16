@@ -9,14 +9,15 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
-
+		monochrome=true,
 		plugin = { "pretty", "html:target/cucumber",
-				"json:target/cucumber.json"},
-		features = "./src/test/resources/features",
-		glue = "com.cybertek.TikiWiki.stepDefinitions",
-		tags = "@JJ",
+
+				"json:target/cucumber.json" }, 
+		features = "./src/test/resources/features", 
+		glue = "com.cybertek.TikiWiki.stepDefinitions", 
+		tags = "@newsletter", 
 		dryRun = false
-		
+
 )
 
 public class CukesRunner extends AbstractTestNGCucumberTests {
