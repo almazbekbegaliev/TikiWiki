@@ -5,12 +5,12 @@ Feature: Articles Home Page Functionalities
 
   Background: Logged In To the Tiki Wiki
     Given User is logged into Tiki Wiki
-@AJ
+
   Scenario: Articles in Articles Home
     And User opens Articles Home
     Then User should be able to see articles
      And User is logged out from App
-
+@AJ
   Scenario: Removing an Article
     And User opens Articles Home
     Then User removes article "aaa"
