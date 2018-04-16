@@ -14,8 +14,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 				"json:target/cucumber.json" },
 		features = "./src/test/resources/features",
 		glue = "stepDefinitions",
-		tags = "@smoke",
-		dryRun = true
+		tags = "@Smoke",
+		dryRun = false
 )
 
 public class SmokeTestRunner extends AbstractTestNGCucumberTests {

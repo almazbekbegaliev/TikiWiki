@@ -7,6 +7,7 @@ Feature: Actions on List Articles page
     Given User is logged into Tiki Wiki
 
   #Positive
+  @automate
   Scenario Outline: Search Functionality of List Articles page
     And User opens Articles Home
     When User searchs for article "<title>"

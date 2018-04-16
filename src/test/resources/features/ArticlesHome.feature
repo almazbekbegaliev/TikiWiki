@@ -1,3 +1,4 @@
+@Regression
 Feature: Articles Home Page Functionalities
   User Should be able to see articles,
   Edit, Print and Remove an article.
@@ -7,7 +8,7 @@ Feature: Articles Home Page Functionalities
     Given User is logged into Tiki Wiki
 @AJ
   Scenario: Articles in Articles Home
-    And User opens Articles Home
+    And User opens Articles home
     Then User should be able to see articles
      And User is logged out from App
 @AJ

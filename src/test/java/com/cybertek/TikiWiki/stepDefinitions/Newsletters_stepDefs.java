@@ -21,8 +21,7 @@ public class Newsletters_stepDefs {
 	}
 
 	@When("^User creates newsletter using \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
-	public void user_creates_newsletter_using(String arg1, String arg2, String arg3, String arg4, String arg5)
-			throws Exception {
+	public void user_creates_newsletter_using(String arg1, String arg2, String arg3, String arg4, String arg5) {
 	}
 
 	@Then("^\"([^\"]*)\" \"([^\"]*)\" should be created$")

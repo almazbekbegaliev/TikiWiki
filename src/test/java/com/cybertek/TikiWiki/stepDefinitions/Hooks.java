@@ -25,6 +25,8 @@ public class Hooks {
 		} else {
 			Extent.passTest(scenario);
 		}
+		
+		Browser.closeDriver();
 
 	}
 	

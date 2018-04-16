@@ -1,3 +1,4 @@
+@Regression @SmokeTest
 Feature: Home Page Functionalities
 
 Scenario: Home Page Functionalities
@@ -5,5 +6,4 @@ Scenario: Home Page Functionalities
 	When Admin goes to Home Page
 	Then Admin should be able to edit/rename Home Page
 	And Admin should be able to see source/history of Home Page
-	
-	
+	And User is logged out from App

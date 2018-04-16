@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.cybertek.TikiWiki.utilities.Browser;
+import com.cybertek.TikiWiki.utilities.BrowserUtils;
 import com.cybertek.TikiWiki.utilities.Config;
 
 public class LoginAndOut {
@@ -41,23 +42,21 @@ public class LoginAndOut {
 	WebElement logInLink;
 	
 	public void logIn() {
-		try {
-			logoutClick();
-			Alert alert = driver.switchTo().alert();
-			alert.accept();
-		}catch (Exception e) {
-			
-		}
+//		try {
+//			logoutClick();
+//			Alert alert = driver.switchTo().alert();
+//			alert.accept();
+//		}catch (Exception e) {
+//			
+//		}
 		driver.get(Config.getProperty("url"));
 		login.click();
-		driver.manage().window().fullscreen();
-		logInLink.click();
-		login.click();
-
-		login.click();
+		BrowserUtils.sleep(1);
 
 		userName.sendKeys(Config.getProperty("username"));
+		BrowserUtils.sleep(1);
 		password.sendKeys(Config.getProperty("password"));
+		BrowserUtils.sleep(1);
 		loginButton.click();
 	}
 	

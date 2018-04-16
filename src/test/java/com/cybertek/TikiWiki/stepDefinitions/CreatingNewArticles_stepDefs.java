@@ -68,8 +68,8 @@ public class CreatingNewArticles_stepDefs {
 
 	@Then("^User is logged out from App$")
 	public void user_is_logged_out_from_App() {
-		LoginAndOut loginPage = new LoginAndOut();
-		loginPage.logoutClick();
+		
+		
 	}
 
 	@When("^User creates a new article \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")

@@ -13,3 +13,4 @@ And I sort by Created
 Then I verify it is sorted from latest date to oldest
 And I sort by Created
 Then I verify it is sorted from oldest to latest date
+And User is logged out from App

@@ -14,10 +14,9 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 				"json:target/cucumber.json"},
 		features = "./src/test/resources/features",
 		glue = "com.cybertek.TikiWiki.stepDefinitions",
-		tags = "@JJ",
+		tags = "@automate",
 		dryRun = false
-		
-		
+
 )
 
 public class CukesRunner extends AbstractTestNGCucumberTests {
