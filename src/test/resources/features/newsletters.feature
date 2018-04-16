@@ -1,3 +1,4 @@
+@regression
 Feature: Newsletters page
   Background: Logged In To the Tiki Wiki
     Given User is logged into Tiki Wiki
