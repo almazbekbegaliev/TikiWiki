@@ -5,7 +5,7 @@ Feature: Articles Home Page Functionalities
 
   Background: Logged In To the Tiki Wiki
     Given User is logged into Tiki Wiki
-
+@AJ
   Scenario: Articles in Articles Home
     And User opens Articles Home
     Then User should be able to see articles
