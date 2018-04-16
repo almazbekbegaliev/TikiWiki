@@ -10,7 +10,7 @@ Feature: Articles Home Page Functionalities
     And User opens Articles Home
     Then User should be able to see articles
      And User is logged out from App
-
+@AJ
   Scenario: Removing an Article
     And User opens Articles Home
     Then User removes article "aaa"
