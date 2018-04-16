@@ -49,6 +49,7 @@ public class LoginAndOut {
 			
 		}
 		driver.get(Config.getProperty("url"));
+		login.click();
 		driver.manage().window().fullscreen();
 		logInLink.click();
 		login.click();
