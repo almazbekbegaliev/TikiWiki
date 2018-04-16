@@ -13,6 +13,7 @@ public class LoginAndOut {
 
 	WebDriver driver;
 
+
 	public LoginAndOut() {
 		driver = Browser.getDriver();
 		PageFactory.initElements(driver, this);

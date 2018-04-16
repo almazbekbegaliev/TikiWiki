@@ -1,9 +1,17 @@
+
 package com.cybertek.TikiWiki.stepDefinitions;
 
 import static org.testng.Assert.assertEquals;
 
+ package com.cybertek.TikiWiki.stepDefinitions;
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+
+
+import static org.testng.Assert.*;
+
 
 import com.cybertek.TikiWiki.pages.ArticlesPage;
 import com.cybertek.TikiWiki.pages.LoginAndOut;
@@ -92,10 +100,4 @@ public class CreatingNewArticles_stepDefs {
 		
 	}
 	
-	
-	
-	
-	
-	
-
 }

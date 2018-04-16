@@ -24,6 +24,8 @@ public class Hooks {
 	@After
 	public void afterMethod(Scenario scenario) {
 
+		WebDriver driver = Browser.getDriver();
+		
 		if (scenario.isFailed()) {
 			byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 			scenario.embed(screenshot, "image/png");
