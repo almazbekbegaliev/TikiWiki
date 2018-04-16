@@ -36,7 +36,7 @@ public class ArticlesHome_stepDef {
 			if (!artPage.article.isEmpty()) {
 				Actions actions = new Actions(driver);
 				actions.moveToElement(artPage.settings).build().perform();
-				BrowserUtils.waitForVisibility(artPage.remove, 5);
+//				BrowserUtils.waitForVisibility(artPage.remove, 5);
 				artPage.remove.click();
 				break;
 				
