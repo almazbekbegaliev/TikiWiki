@@ -1,3 +1,4 @@
+@SmokeTest @Regression
 Feature: Calendar Feature
 
 @Calendar

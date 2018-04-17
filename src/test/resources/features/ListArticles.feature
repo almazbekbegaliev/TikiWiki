@@ -1,4 +1,4 @@
-@automate
+@SmokeTest @Regression
 Feature: Actions on List Articles page
   User should be able to Search for Article,
   Select multiple aritcles and perform action on them.
