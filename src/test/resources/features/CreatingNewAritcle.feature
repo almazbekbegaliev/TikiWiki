@@ -1,4 +1,4 @@
-@new
+
 Feature: Creating New Article
   User should be able to Create new Article
 

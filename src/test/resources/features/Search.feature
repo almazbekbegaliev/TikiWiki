@@ -1,4 +1,4 @@
-@SmokeTest @Regression
+
 Feature: Search functionality
 @JJ
 Scenario Outline: Search for pages

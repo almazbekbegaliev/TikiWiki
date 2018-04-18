@@ -42,13 +42,15 @@ public class LoginAndOut {
 	WebElement logInLink;
 	
 	public void logIn() {
-//		try {
-//			logoutClick();
-//			Alert alert = driver.switchTo().alert();
-//			alert.accept();
-//		}catch (Exception e) {
-//			
-//		}
+		try {
+			login.click();
+			BrowserUtils.sleep(1);
+			logoutClick();
+			Alert alert = driver.switchTo().alert();
+			alert.accept();
+		}catch (Exception e) {
+			
+		}
 		driver.get(Config.getProperty("url"));
 		login.click();
 		BrowserUtils.sleep(1);

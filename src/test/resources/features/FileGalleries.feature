@@ -1,4 +1,4 @@
-@SmokeTest @Regression
+
 Feature: List Galleries
 
 Background:

@@ -115,12 +115,12 @@
 				<version>2.21.0</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>TikiWikiRegression.xml</suiteXmlFile>
+					<!-- this line tell maven surefire plugin which file should be executed-->
+						<suiteXmlFile>${runner}</suiteXmlFile>
 					</suiteXmlFiles>
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>
@@ -134,16 +134,19 @@
 						</goals>
 						<configuration>
 							<projectname>TestProject</projectname>
+							<!-- path to the report that will be generated -->
 							<outputdirectory>${project.build.directory}/cucumber-html-reports</outputdirectory>
+							<!-- path to the json file that will be used to genetrate report -->
+							<!-- it has to match the one on the cukesrunner -->
 							<cucumberoutput>${project.build.directory}/target/cucumber.json</cucumberoutput>
 							<enableflashcharts></enableflashcharts>
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
-			
-		</plugins>
 
+			</plugin>
+		</plugins>
 	</build>
+
 
 </project>
