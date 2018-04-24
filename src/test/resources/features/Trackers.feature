@@ -9,7 +9,7 @@ Scenario:  Search Files
 And I search for "asdasd"
 Then verify link is found
 
-@Regression @SmokeTest
+#@Regression @SmokeTest
 Scenario: Sort Files
 And I sort by Created
 Then I verify it is sorted from latest date to oldest
