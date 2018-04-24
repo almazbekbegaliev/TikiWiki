@@ -3,6 +3,8 @@ package com.cybertek.TikiWiki.runners;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import com.beust.jcommander.Parameter;
+import com.cybertek.TikiWiki.utilities.Browser;
 import com.cybertek.TikiWiki.utilities.Extent;
 
 import cucumber.api.CucumberOptions;
@@ -20,14 +22,17 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 public class SmokeTestRunner extends AbstractTestNGCucumberTests {
 
+	@Parameter
 	@BeforeClass
 	public void setup() {
+//		SauceLabs.setUp();
 		Extent.setupExtent();
 	}
 
 	@AfterClass
 	public void tearDown() {
 		Extent.flushExtent();
+		Browser.closeDriver();
 	}
 
 }

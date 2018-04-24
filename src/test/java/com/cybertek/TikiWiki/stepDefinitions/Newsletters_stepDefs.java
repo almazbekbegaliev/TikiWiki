@@ -2,7 +2,7 @@ package com.cybertek.TikiWiki.stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 
-import com.cybertek.TikiWiki.pages.LoginAndOut;
+import com.cybertek.TikiWiki.pages.LoginPage;
 
 import com.cybertek.TikiWiki.utilities.Browser;
 
@@ -13,7 +13,7 @@ import cucumber.api.java.en.When;
 public class Newsletters_stepDefs {
 
 	WebDriver driver = Browser.getDriver();
-	LoginAndOut log = new LoginAndOut();
+	LoginPage log = new LoginPage();
 
 	@Given("^User navigates to Admin newsletters$")
 	public void user_navigates_to_Admin_newsletters() throws Exception {

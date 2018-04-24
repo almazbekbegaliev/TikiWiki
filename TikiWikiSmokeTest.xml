@@ -1,10 +1,35 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="SuiteCRM Regression Automation" verbose="2">
 
-	<test name="Automated tests">
+	<test name="Smoke tests running on Windows 10, chrome 65.0">
+		<parameter name="platform" value="Windows 10"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browserVersion" value="65.0"></parameter>
+
 		<classes>
-			<class name ="com.cybertek.TikiWiki.runners.SmokeTestRunner"></class>
+			<class name="com.cybertek.TikiWiki.runners.SmokeTestRunner"></class>
 		</classes>
+
 	</test>
+
+	<!-- <test name="Smoke tests">
+		<parameter name="platform" value="Windows 10"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browserVersion" value="65.0"></parameter>
+		<classes>
+			<class name="com.cybertek.TikiWiki.runners.SmokeTestRunner"></class>
+		</classes>
+
+	</test>
+
+	<test name="Smoke tests">
+		<parameter name="platform" value="Windows 10"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browserVersion" value="65.0"></parameter>
+		<classes>
+			<class name="com.cybertek.TikiWiki.runners.SmokeTestRunner"></class>
+		</classes>
+
+	</test> -->
 
 </suite>

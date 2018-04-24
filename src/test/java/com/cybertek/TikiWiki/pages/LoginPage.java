@@ -1,6 +1,7 @@
 package com.cybertek.TikiWiki.pages;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,12 +11,12 @@ import com.cybertek.TikiWiki.utilities.Browser;
 import com.cybertek.TikiWiki.utilities.BrowserUtils;
 import com.cybertek.TikiWiki.utilities.Config;
 
-public class LoginAndOut {
+public class LoginPage {
 
 	WebDriver driver;
 
 
-	public LoginAndOut() {
+	public LoginPage() {
 		driver = Browser.getDriver();
 		PageFactory.initElements(driver, this);
 	}
@@ -42,15 +43,6 @@ public class LoginAndOut {
 	WebElement logInLink;
 	
 	public void logIn() {
-		try {
-			login.click();
-			BrowserUtils.sleep(1);
-			logoutClick();
-			Alert alert = driver.switchTo().alert();
-			alert.accept();
-		}catch (Exception e) {
-			
-		}
 		driver.get(Config.getProperty("url"));
 		login.click();
 		BrowserUtils.sleep(1);
@@ -63,14 +55,22 @@ public class LoginAndOut {
 	}
 	
 	
-	public void logoutClick() {
-		try {
-			Alert alert = driver.switchTo().alert();
-			alert.accept();
-		}catch(Exception ee) {
-			
-		}
-		logout.click();
+	public void logout() {
+//		try {
+//			logout.click();
+//			BrowserUtils.sleep(1);
+//			logout.click();
+//			BrowserUtils.sleep(2);
+//			Alert alert = driver.switchTo().alert();
+//			alert.accept();
+//		}catch (Exception e) {
+//			
+//		}
+		// logout.click();
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		WebElement element = BrowserUtils.waitForClickablility(logout, 4);
+		js.executeScript("arguments[0].click()", element);
+		BrowserUtils.sleep(2);
 		signOut.click();
 	}
 

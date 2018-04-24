@@ -3,6 +3,7 @@ package com.cybertek.TikiWiki.runners;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import com.cybertek.TikiWiki.utilities.Browser;
 import com.cybertek.TikiWiki.utilities.Extent;
 
 import cucumber.api.CucumberOptions;
@@ -14,7 +15,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 				"json:target/cucumber.json"},
 		features = "./src/test/resources/features",
 		glue = "com.cybertek.TikiWiki.stepDefinitions",
-		tags = "@automate",
+		tags = "@Smoke",
 		dryRun = false
 
 )
@@ -29,6 +30,7 @@ public class CukesRunner extends AbstractTestNGCucumberTests {
 	@AfterClass
 	public void tearDown() {
 		Extent.flushExtent();
+		Browser.closeDriver();
 	}
 
 }

@@ -13,7 +13,7 @@ import org.testng.Assert;
 import com.cybertek.TikiWiki.pages.AddEventPage;
 import com.cybertek.TikiWiki.pages.CalendarPage;
 import com.cybertek.TikiWiki.pages.HomePage;
-import com.cybertek.TikiWiki.pages.LoginAndOut;
+import com.cybertek.TikiWiki.pages.LoginPage;
 import com.cybertek.TikiWiki.utilities.Browser;
 
 import cucumber.api.PendingException;
@@ -30,7 +30,7 @@ public class CalendarPage_stepDefs {
 	AddEventPage ap = new AddEventPage();
 	
 	HomePage hp = new HomePage();
-	LoginAndOut lo = new LoginAndOut();
+	LoginPage lo = new LoginPage();
 	Actions action ;
 	
 	

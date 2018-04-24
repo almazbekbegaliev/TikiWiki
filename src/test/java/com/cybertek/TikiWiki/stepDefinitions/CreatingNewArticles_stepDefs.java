@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import static org.testng.Assert.*;
 
 import com.cybertek.TikiWiki.pages.ArticlesPage;
-import com.cybertek.TikiWiki.pages.LoginAndOut;
+import com.cybertek.TikiWiki.pages.LoginPage;
 import com.cybertek.TikiWiki.pages.NewArticlesPage;
 import com.cybertek.TikiWiki.utilities.Browser;
 import com.cybertek.TikiWiki.utilities.BrowserUtils;
@@ -23,7 +23,7 @@ public class CreatingNewArticles_stepDefs {
 	@Given("^User is logged into Tiki Wiki$")
 	public void user_is_logged_into_Tiki_Wiki() {
 		WebDriver driver = Browser.getDriver();
-		LoginAndOut loginPage = new LoginAndOut();
+		LoginPage loginPage = new LoginPage();
 		loginPage.logIn();
 
 	}

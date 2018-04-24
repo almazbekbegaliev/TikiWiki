@@ -1,4 +1,4 @@
-@Regression @SmokeTest
+#@Regression @SmokeTest
 Feature: Home Page Functionalities
 
 Scenario: Home Page Functionalities

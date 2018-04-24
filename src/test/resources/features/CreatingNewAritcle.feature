@@ -1,4 +1,3 @@
-
 Feature: Creating New Article
   User should be able to Create new Article
 
@@ -11,6 +10,7 @@ Feature: Creating New Article
     Then Article should be displayed on the list
     And User is logged out from App
 
+@SmokeTest @Regression
   Scenario Outline: Create New Article: Classification
     When User creates a new article "<title>" "<topic>" "<type>" "<category>" "<tags>"
     Then Article should be displayed on the list
