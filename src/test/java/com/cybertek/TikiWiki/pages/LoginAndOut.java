@@ -48,13 +48,8 @@ public class LoginAndOut {
 		}catch (Exception e) {
 			
 		}
-		driver.get(Config.getProperty("url"));
-		driver.manage().window().fullscreen();
 		logInLink.click();
 		login.click();
-
-		login.click();
-
 		userName.sendKeys(Config.getProperty("username"));
 		password.sendKeys(Config.getProperty("password"));
 		loginButton.click();

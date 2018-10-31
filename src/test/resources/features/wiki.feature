@@ -1,10 +1,17 @@
+@home
 Feature: Calendar Feature
-
-
-	Scenario: Create an event in Calendar
+  Background: Logged In To the Tiki Wiki
+    Given User is logged into Tiki Wiki
+    
+	Scenario Outline: Create an event in Calendar
 	Given User navigates to Admin Calendars page
-	When User creates "My Company Holidays Calendar"
-	Then "My Company Holidays Calendar" should in the calendar list
+	When User creates "<name>" "<title>" "<start>" "<end>" "<description>" "<location>"
+	Then "<title>" should in the calendar list
+
+Examples:
+|			name			|	title		| 			start	| 		end		| 	description		|location |
+|		Rock-and-Roll		|My Company Holidays Calendar|2018-04-16|2018-04-16|	Good thing		|Chicago, IL|
+|		Rock-and-Roll		|My Company Calendar|2019-04-16|2019-04-18			|	Better thing	|Mayluu-Suu|
 
 	Scenario: Edit a Calendar
 	Given User navigates to Calendar page

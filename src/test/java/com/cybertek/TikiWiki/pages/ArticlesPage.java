@@ -13,8 +13,11 @@ import com.cybertek.TikiWiki.utilities.Browser;
 public class ArticlesPage {
 
 	WebDriver driver = Browser.getDriver();
-	
+	public ArticlesPage(String one) {
+		
+	}
 	public ArticlesPage() {
+		this("one");
 		PageFactory.initElements(driver, this);
 	}
 	

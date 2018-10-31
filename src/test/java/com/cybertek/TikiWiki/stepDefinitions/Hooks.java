@@ -14,10 +14,11 @@ import cucumber.api.java.Before;
 
 public class Hooks {
 
-	WebDriver driver = Browser.getDriver();
+	WebDriver driver;
 
 	@Before
 	public void setup() {
+		driver= Browser.getDriver();
 		driver.get(Config.getProperty("url"));
 	}
 
